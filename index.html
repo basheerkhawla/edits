@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Buy Telegram Stars Instantly | Tele-Starz</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css?v=3" />
+
+  <!-- Hreflang Tags for International SEO -->
+  <link rel="alternate" hreflang="x-default" href="https://tele-starz.com/" />
+  <link rel="alternate" hreflang="en" href="https://tele-starz.com/" />
+  <link rel="alternate" hreflang="ar" href="https://tele-starz.com/" />
+  <link rel="alternate" hreflang="ru" href="https://tele-starz.com/" />
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Top up your Telegram Stars instantly with Tele-Starz. Secure payments via Crypto, USDT, TON, & Cards. Get the best market price today!" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Buy Telegram Stars Instantly | Tele-Starz" />
+  <meta property="og:description" content="Top up your Telegram Stars instantly with Tele-Starz. Secure payments via Crypto, USDT, TON, & Cards." />
+  <meta property="og:site_name" content="Tele-Starz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tele-starz.com/" />
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tele-Starz",
+    "url": "https://tele-starz.com",
+    "description": "The premier digital store to buy and exchange Telegram Stars securely using Crypto, TON, USDT, and Credit Cards.",
+    "sameAs": ["https://t.me/Tele_starz"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "url": "https://t.me/Tt09x",
+      "availableLanguage": ["English", "Arabic", "Russian"]
+    }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How can I buy Telegram Stars on Tele-Starz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Simply select a package, enter your Telegram username, and pay securely using Crypto, TON, or Cards."
+      }
+    }, {
+      "@type": "Question",
+      "name": "How long does delivery take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Delivery is instant! Once your payment is confirmed, the stars are transferred to your account in under a minute."
+      }
+    }]
+  }
+  </script>
+
+</head>
+
+<body>
+  <div class="bg-orbs"></div>
+  <div class="stars-bg" id="starsBg"></div>
+
+  <div id="maintenance">
+    <div style="font-size: 3.5rem">🔧</div>
+    <h2 data-t="maintenance_title">Under Maintenance</h2>
+    <p data-t="maintenance_msg">We're improving the service, back soon!</p>
+  </div>
+
+  <nav>
+    <a class="nav-logo" href="/"><span>⭐</span> Tele-Starz</a>
+    <div class="nav-right">
+      <a id="btnChannel" class="btn-channel" href="#" target="_blank" rel="noopener">
+        <span>📢</span><span class="ch-label" data-t="channel_button">Our Channel</span>
+      </a>
+      <select id="langSelect" class="lang-btn">
+        <option value="en">🌐 EN</option>
+        <option value="ar">AR</option>
+        <option value="ru">RU</option>
+        <option value="fr">FR</option>
+        <option value="de">DE</option>
+        <option value="es">ES</option>
+        <option value="tr">TR</option>
+      </select>
+      <div class="nav-auth" id="guestNav">
+        <button class="btn-sm outline" id="btnOpenLogin" data-t="login">
+          Log In
+        </button>
+        <button class="btn-sm filled" id="btnOpenRegister" data-t="register">
+          Sign Up
+        </button>
+      </div>
+      <div id="userGreeting">
+        <span>👋 <span data-t="hello">Hello,</span>
+          <strong id="greetEmail"></strong></span>
+        <a href="/dashboard" class="btn-sm filled" data-t="dashboard">Dashboard</a>
+        <button class="btn-sm outline" id="btnLogout" data-t="logout">
+          Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrapper" id="mainWrapper">
+    <header>
+      <div id="twaWelcome"></div>
+      <div class="logo-pill">
+        ⭐ Tele-Starz — <span data-t="tagline">Stars Store</span>
+      </div>
+      <h1>
+        <span data-t="hero_title">Telegram Stars</span><br /><span data-t="hero_sub">Best Price on the Market</span>
+      </h1>
+
+      <!-- PROMO BANNER -->
+      <div class="promo-banner"
+        style="margin: 20px auto 30px; max-width: 500px; padding: 15px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(250, 204, 21, 0.15) 0%, rgba(249, 115, 22, 0.15) 100%); border: 1px solid rgba(250, 204, 21, 0.3); backdrop-filter: blur(10px); text-align: center; box-shadow: 0 4px 15px rgba(250, 204, 21, 0.1);">
+        <h3 style="color: var(--star); font-size: 1.1rem; margin-bottom: 5px;" data-t="promo_banner_title">🔥 عروض حصرية
+          لفترة محدودة!</h3>
+        <p style="color: var(--text); font-size: 0.85rem; font-weight: 500;" data-t="promo_banner_desc">احصل على نجوم
+          تلجرام بأفضل الأسعار وبسرعة البرق! اربح المزيد من خلال دعوة أصدقائك (نظام الإحالات).</p>
+      </div>
+
+      <div class="member-badge" id="memberBadge">
+        ⭐
+        <span data-t="member_tip">You're a member! Referral earnings are collected
+          automatically.</span>
+      </div>
+    </header>
+
+    <!-- 1. @username + preview -->
+    <div class="section-label" data-t="tg_label">
+      Telegram ID to receive stars
+    </div>
+    <div class="box">
+      <div class="field" style="margin-bottom: 0">
+        <input type="text" id="tgUsername" class="styled-input" data-tp="tg_placeholder" placeholder="@username"
+          autocomplete="off" spellcheck="false" />
+        <div id="atHint" class="at-hint" style="display: none" data-t="at_hint">
+          💡 Username must start with @
+        </div>
+      </div>
+      <div id="accountPreview">
+        <img id="previewAvatar" src="" alt="" class="preview-avatar" onerror="
+              this.src =
+                'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%2حتى 40%3E%3Ccircle cx=%2220%22 cy=%2220%22 r=%2220%22 fill=%2حتى 40%23334155%22/%3E%3Ctext x=%2250%25%22 y=%2256%25%22 text-anchor=%22middle%22 font-size=%2218%22 fill=%2حتى 40%23f7c843%2حتى 40%3E%Eحتى 40%AD%90%3C/text%3E%3C/svg%3E'
+            " />
+        <div class="preview-info">
+          <div class="preview-name" id="previewName"></div>
+          <div class="preview-username" id="previewUsername"></div>
+        </div>
+        <div class="preview-verified" data-t="verified">✅ Account found</div>
+      </div>
+      <div id="accountError"></div>
+    </div>
+
+    <!-- 2. Package select (dropdown) + custom -->
+    <div class="section-label" data-t="pick_package">⭐ Choose a Package</div>
+    <div class="box">
+      <div class="field" style="margin-bottom: 12px">
+        <select id="packageSelect" class="styled-select">
+          <option value="" disabled selected data-t="select_package">
+            — Select Package —
+          </option>
+        </select>
+      </div>
+      <div class="divider-or">
+        <span data-t="or_custom">or enter custom amount</span>
+      </div>
+      <div class="custom-row">
+        <div class="field" style="margin-bottom: 0">
+          <label for="customStars" data-t="custom_label">Number of Stars (min 50)</label>
+          <input type="number" id="customStars" min="50" step="1" data-tp="custom_placeholder" placeholder="e.g. 750" />
+        </div>
+        <div class="live-price-box">
+          <div class="currency" data-t="price_label">Price</div>
+          <div class="amount" id="livePrice">0.00 $</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Payment Method -->
+    <div class="section-label" data-t="pay_method_label">💳 Payment Method</div>
+    <div class="pay-method-group">
+      <button class="pay-method-btn active" id="btnCryptoPay" onclick="selectPaymentMethod('cryptopay')">
+        🤖 <span data-t="pay_cryptopay">CryptoBot Pay</span>
+      </button>
+      <button class="pay-method-btn" id="btnTon" onclick="selectPaymentMethod('ton')">
+        💎 <span data-t="pay_ton">TON Transfer</span>
+      </button>
+    </div>
+
+    <div id="tonUI">
+      <div class="box" id="tonDetailsBox" style="display: none; margin-bottom: 16px;">
+        <div id="tonDetails">
+          <div style="margin-top: 16px">
+            <div class="ton-section-title" data-t="ton_wallet_address">
+              Wallet Address
+            </div>
+            <div class="ton-info-row">
+              <div class="ton-value" id="tonWalletAddress">—</div>
+              <button class="copy-icon-btn" id="btnCopyWallet">📋</button>
+              <button class="copy-icon-btn" id="btnShowWalletQr">🔳</button>
+            </div>
+            <div id="tonWalletQrBox" style="display: none; text-align: center; margin-top: 10px">
+              <img id="tonWalletQrImg" alt="TON Wallet QR" style="
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 8px;
+                    background: #fff;
+                    padding: 8px;
+                  " />
+            </div>
+          </div>
+          <div>
+            <div class="ton-section-title" data-t="ton_amount_required">
+              Required Amount
+            </div>
+            <div class="ton-info-row">
+              <div class="ton-value" id="tonAmountDisplay">—</div>
+            </div>
+          </div>
+          <div>
+            <div class="ton-section-title" data-t="ton_comment">
+              Comment Code
+            </div>
+            <div class="ton-info-row">
+              <div class="ton-value ton-comment-value" id="tonCommentDisplay">
+                —
+              </div>
+              <button class="copy-icon-btn" id="btnCopyComment">📋</button>
+            </div>
+          </div>
+          <div class="ton-warning-box" data-t="ton_warning">
+            ⚠️ Include the Comment Code exactly when transferring.
+          </div>
+          <div class="ton-timer-row">
+            <span style="font-size: 0.72rem" data-t="ton_expired_session">Session expires in:</span>
+            <span id="tonTimer">30:00</span>
+          </div>
+          <button class="action-btn" id="btnCheckTon">
+            🔍 <span data-t="ton_check_btn">Check Payment</span>
+          </button>
+          <div class="ton-status" id="tonStatusMsg"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Checkout -->
+    <div class="box" id="checkoutBox">
+      <div class="guest-only" id="emailFieldWrap" style="margin-bottom: 20px;">
+        <div class="email-hint">
+          <span data-t="email_hint">📧 Enter your email to avoid losing your order.
+            <strong>Better: log in</strong> for referral commissions.</span>
+        </div>
+        <div class="field" style="margin-bottom: 0;">
+          <label for="guestEmail" data-t="email_label">Email Address (optional)</label>
+          <input type="email" id="guestEmail" class="styled-input" data-tp="email_placeholder"
+            placeholder="example@email.com" autocomplete="email" />
+        </div>
+      </div>
+      <button class="pay-btn" id="payBtn">
+        <div class="btn-spinner"></div>
+        <span class="btn-text" data-t="pay_now">⭐ Pay Now</span>
+      </button>
+      <div class="security-strip">
+        <span class="lock-icon">🔒</span><span data-t="secure_note">All payments are encrypted and secure</span>
+      </div>
+    </div>
+
+    <!-- 5. Recent orders -->
+    <div class="section-label" data-t="recent_orders_title" style="margin-top: 32px">
+      📋 Recent Orders
+    </div>
+    <div class="box" style="padding: 18px 18px 14px">
+      <div class="ro-bar">
+        <button class="ro-filter-btn" data-filter="last_hour" data-t="filter_last_hour">
+          Last Hour
+        </button>
+        <button class="ro-filter-btn active" data-filter="last_24h" data-t="filter_last_24h">
+          Last 24h
+        </button>
+        <button class="ro-filter-btn" data-filter="last_week" data-t="filter_last_week">
+          Last Week
+        </button>
+        <button class="ro-filter-btn" data-filter="last_month" data-t="filter_last_month">
+          Last Month
+        </button>
+        <button class="ro-filter-btn" data-filter="all" data-t="filter_all">
+          All Time
+        </button>
+        <div class="ro-divider"></div>
+        <button class="ro-sort-btn active" data-sort="newest">⏱</button>
+        <button class="ro-sort-btn" data-sort="price_desc" data-t="sort_price_desc">
+          $↑
+        </button>
+        <button class="ro-sort-btn" data-sort="price_asc" data-t="sort_price_asc">
+          $↓
+        </button>
+        <button class="ro-sort-btn" data-sort="qty_desc" data-t="sort_qty_desc">
+          ⭐↑
+        </button>
+        <button class="ro-sort-btn" data-sort="qty_asc" data-t="sort_qty_asc">
+          ⭐↓
+        </button>
+      </div>
+      <div class="ro-grid" id="recentOrdersList">
+        <div class="ro-empty">…</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p style="margin-bottom: 8px;">
+      💬 For inquiries and support, contact us on Telegram: <a href="https://t.me/Tt09x"
+        style="color: #f7c843; text-decoration: none;">@Tt09x</a>
+    </p>
+    <p>
+      © 2026 Tele-Starz ·
+      <span data-t="footer_rights">All rights reserved</span> · USD
+    </p>
+  </footer>
+
+  <button class="support-btn" id="btnSupport" title="Support">💬</button>
+  <div class="toast-wrap" id="toastWrap"></div>
+
+  <!-- Login modal -->
+  <div class="overlay" id="loginModal">
+    <div class="modal">
+      <button class="modal-close" id="btnCloseLogin">✕</button>
+      <h2 data-t="login_title">Log In</h2>
+      <p class="sub" data-t="login_sub">Welcome back 👋</p>
+      <div class="ref-note" id="loginRefNote">
+        🎁 <span data-t="ref_detected">Referral link detected</span>
+      </div>
+      <div class="field">
+        <label data-t="email_field">Email</label><input type="email" id="loginEmail" autocomplete="email" />
+      </div>
+      <div class="field">
+        <label data-t="password">Password</label><input type="password" id="loginPassword" />
+        <div style="text-align: left; margin-top: 4px;">
+            <a href="#" id="linkToForgot" style="font-size: 0.8rem; color: #f7c843; text-decoration: none;">نسيت كلمة المرور؟</a>
+        </div>
+      </div>
+      <p class="error-msg" id="loginError"></p>
+      <button class="full-btn" id="loginBtn">
+        <div class="btn-spinner"></div>
+        <span class="btn-label" data-t="login">Log In</span>
+      </button>
+      <div class="modal-footer">
+        <span data-t="no_account">Don't have an account?</span>
+        <a id="linkToRegister" data-t="register_link">Sign up</a>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Forgot Password modal -->
+  <div class="overlay" id="forgotModal">
+    <div class="modal">
+      <button class="modal-close" id="btnCloseForgot">✕</button>
+      <h2>استعادة كلمة المرور</h2>
+      <p class="sub">أدخل بريدك الإلكتروني لإرسال رابط الاستعادة</p>
+      <div class="field">
+        <label>Email</label><input type="email" id="forgotEmail" autocomplete="email" />
+      </div>
+      <p class="error-msg" id="forgotError"></p>
+      <button class="full-btn" id="forgotBtn">
+        <div class="btn-spinner"></div>
+        <span class="btn-label">إرسال رابط الاستعادة</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Reset Password modal -->
+  <div class="overlay" id="resetModal">
+    <div class="modal">
+      <button class="modal-close" id="btnCloseReset">✕</button>
+      <h2>تعيين كلمة مرور جديدة</h2>
+      <p class="sub">أدخل كلمة المرور الجديدة الخاصة بك</p>
+      <div class="field">
+        <label>New Password</label><input type="password" id="resetPassword" />
+      </div>
+      <p class="error-msg" id="resetError"></p>
+      <button class="full-btn" id="resetBtn">
+        <div class="btn-spinner"></div>
+        <span class="btn-label">تغيير كلمة المرور</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Register modal -->
+  <div class="overlay" id="registerModal">
+    <div class="modal">
+      <button class="modal-close" id="btnCloseRegister">✕</button>
+      <h2 data-t="register_title">Create Account</h2>
+      <p class="sub" data-t="register_sub">
+        Join and earn from every referral ⭐
+      </p>
+      <div class="ref-note" id="regRefNote">
+        🎁 <span data-t="ref_detected">Referral link detected</span>
+      </div>
+      <div class="field">
+        <label data-t="email_field">Email</label><input type="email" id="regEmail" autocomplete="email" />
+      </div>
+      <div class="field">
+        <label data-t="tg_optional">Telegram ID (optional)</label><input type="text" id="regTelegramId"
+          placeholder="@username" />
+      </div>
+      <div class="field">
+        <label data-t="password">Password</label><input type="password" id="regPassword" />
+      </div>
+      <p class="error-msg" id="regError"></p>
+      <button class="full-btn" id="registerBtn">
+        <div class="btn-spinner"></div>
+        <span class="btn-label" data-t="create_account">Create Account Free</span>
+      </button>
+      <div class="modal-footer">
+        <span data-t="have_account">Already have an account?</span>
+        <a id="linkToLogin" data-t="login_link">Log in</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/translations.js?v=5"></script>
+  <script src="/static/app.js?v=5"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const forgotModal = document.getElementById('forgotModal');
+    const resetModal = document.getElementById('resetModal');
+    const loginModal = document.getElementById('loginModal');
+    
+    // Links and buttons
+    const linkToForgot = document.getElementById('linkToForgot');
+    const btnCloseForgot = document.getElementById('btnCloseForgot');
+    const btnCloseReset = document.getElementById('btnCloseReset');
+    const forgotBtn = document.getElementById('forgotBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    
+    // Open forgot password
+    if(linkToForgot) {
+      linkToForgot.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginModal.classList.remove('open');
+        forgotModal.classList.add('open');
+      });
+    }
+    
+    if(btnCloseForgot) btnCloseForgot.addEventListener('click', () => forgotModal.classList.remove('open'));
+    if(btnCloseReset) btnCloseReset.addEventListener('click', () => resetModal.classList.remove('open'));
+    
+    // Check URL for reset_token
+    const urlParams = new URLSearchParams(window.location.search);
+    const resetToken = urlParams.get('reset_token');
+    if(resetToken) {
+        resetModal.classList.add('open');
+    }
+    
+    // Submit Forgot Password
+    if(forgotBtn) {
+        forgotBtn.addEventListener('click', async () => {
+            const email = document.getElementById('forgotEmail').value.trim();
+            const err = document.getElementById('forgotError');
+            if(!email) { err.textContent = 'الرجاء إدخال البريد الإلكتروني'; err.style.display='block'; return; }
+            
+            forgotBtn.classList.add('loading');
+            err.style.display = 'none';
+            try {
+                const res = await fetch('/api/forgot-password', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({email})
+                });
+                const data = await res.json();
+                alert(data.message || 'تم الإرسال');
+                forgotModal.classList.remove('open');
+            } catch (e) {
+                err.textContent = 'حدث خطأ في الاتصال';
+                err.style.display = 'block';
+            } finally {
+                forgotBtn.classList.remove('loading');
+            }
+        });
+    }
+    
+    // Submit Reset Password
+    if(resetBtn) {
+        resetBtn.addEventListener('click', async () => {
+            const newPassword = document.getElementById('resetPassword').value;
+            const err = document.getElementById('resetError');
+            if(newPassword.length < 6) { err.textContent = 'يجب أن تكون 6 أحرف على الأقل'; err.style.display='block'; return; }
+            
+            resetBtn.classList.add('loading');
+            err.style.display = 'none';
+            try {
+                const res = await fetch('/api/reset-password', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({token: resetToken, new_password: newPassword})
+                });
+                const data = await res.json();
+                if(res.ok) {
+                    alert('تم تغيير كلمة المرور بنجاح! يمكنك الآن تسجيل الدخول.');
+                    resetModal.classList.remove('open');
+                    // Remove token from url
+                    window.history.replaceState({}, document.title, "/");
+                    loginModal.classList.add('open');
+                } else {
+                    err.textContent = data.detail || 'حدث خطأ';
+                    err.style.display = 'block';
+                }
+            } catch (e) {
+                err.textContent = 'حدث خطأ في الاتصال';
+                err.style.display = 'block';
+            } finally {
+                resetBtn.classList.remove('loading');
+            }
+        });
+    }
+  });
+</script>
+</body>
+
+</html>
