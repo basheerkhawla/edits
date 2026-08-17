@@ -1,0 +1,9 @@
+.env
+starshub.db
+__pycache__/
+venv/
+*.pyc
+.idea/
+.vscode/
+mytmp/
+*.log
